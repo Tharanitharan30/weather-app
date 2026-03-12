@@ -1,0 +1,161 @@
+.prediction-card {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.prediction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.prediction-title {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-icon {
+  width: 28px;
+  height: 28px;
+  color: #667eea;
+}
+
+.prediction-empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #718096;
+}
+
+.forecast-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  opacity: 0.5;
+}
+
+.prediction-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.prediction-item {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.prediction-item:hover {
+  border-color: #667eea;
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.prediction-date {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+  min-width: 80px;
+}
+
+.prediction-icon {
+  font-size: 2.5rem;
+}
+
+.prediction-temp {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.temp-high {
+  color: #f56565;
+}
+
+.temp-low {
+  color: #4299e1;
+}
+
+.prediction-condition {
+  grid-column: 2 / 3;
+  color: #4a5568;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.prediction-details {
+  grid-column: 3 / 4;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+@media (max-width: 1024px) {
+  .prediction-item {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .prediction-date {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .prediction-icon {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .prediction-temp {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+  }
+  
+  .prediction-condition {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  .prediction-details {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    justify-content: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .prediction-card {
+    padding: 1.5rem;
+  }
+  
+  .prediction-title {
+    font-size: 1.25rem;
+  }
+  
+  .prediction-item {
+    padding: 1rem;
+  }
+  
+  .prediction-icon {
+    font-size: 2rem;
+  }
+}
